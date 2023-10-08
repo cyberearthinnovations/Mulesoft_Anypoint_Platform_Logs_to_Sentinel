@@ -10,8 +10,8 @@ def parse_and_send_alerts():
     # Step 1: Generate Token
     token_url = "https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token"
     token_data = {
-        "client_id": "**Your client id**",
-        "client_secret": "**Your Client Secret**",
+        "client_id": "**Your client id**",  # Replace with your MuleSoft client ID
+        "client_secret": "**Your Client Secret**",  # Replace with your MuleSoft client secret
         "grant_type": "client_credentials"
     }
     token_headers = {
@@ -28,7 +28,7 @@ def parse_and_send_alerts():
         exit()
 
     # Step 2: Retrieve List of Environment IDs
-    org_id = "**Your Organization ID**"
+    org_id = "**Your Organization ID**"  # Replace with your organization ID
     env_list_url = f"https://anypoint.mulesoft.com/accounts/api/organizations/{org_id}/environments"
     env_headers = {
         "Authorization": f"Bearer {access_token}"
@@ -60,9 +60,9 @@ def parse_and_send_alerts():
         else:
             print(f"Failed to retrieve alerts for Environment ID {env_id}. Status code:", alert_response.status_code)
 
-    # Step 4: Send data to Sentinel
-    customer_id = '**your sentinel(log analytic workspace) customer id**'
-    shared_key = "**your sentinel(log analytic workspace) shared_key**"
+    # Step 4: Send data to Sentinel (Azure Log Analytics Workspace)
+    customer_id = '**your sentinel(log analytic workspace) customer id**'  # Replace with your Azure Log Analytics Workspace customer ID
+    shared_key = "**your sentinel(log analytic workspace) shared_key**"  # Replace with your Azure Log Analytics Workspace shared key
 
     # The log type is the name of the event that is being submitted
     log_type = 'mulesoft_alerts'
