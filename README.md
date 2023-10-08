@@ -18,20 +18,20 @@ Before you can use this script, make sure you have the following:
    - pip install requests
 
 ## Usage
-### Follow these steps to use the script:
+Follow these steps to use the script:
 
-### Update Script with Credentials:
+1. **Update Script with Credentials**:
 
-Open the script and update the following variables with your credentials:
-client_id: Your MuleSoft Client ID.
-client_secret: Your MuleSoft Client Secret.
-customer_id: Your Azure Monitor Sentinel Customer ID.
-shared_key: Your Azure Monitor Shared Key.
-### Run the Script:
+   - Open the script and update the following variables with your credentials:
+     client_id: Your MuleSoft Client ID.
+     client_secret: Your MuleSoft Client Secret.
+     customer_id: Your Azure Monitor Sentinel Customer ID.
+     shared_key: Your Azure Monitor Shared Key.
+2. **Run the Script**:
 
-Execute the script by running the following command:
-      python your_script.py
+   - Execute the script by running the following command:
+     python your_script.py
+     
+3. **Continuous Execution**:
 
-### Continuous Execution:
-
-By default, the script runs once and then sleeps for 24 hours. You can adjust the sleep duration according to your needs.
+      By default, the script runs once and then sleeps for 24 hours. You can adjust the sleep duration according to your needs.
